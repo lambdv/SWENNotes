@@ -1,0 +1,33 @@
+<html lang="en">
+    <h1>notes</h1>
+    <ul id="content"></ul>
+</html>
+<script>
+    const pages = [
+        "aiml231",
+        "cgra151",
+        "comp102",
+        "comp103",
+        "comp261",
+        "cybr171",
+        "cybr271",
+        "engr101",
+        "engr110",
+        "engr121",
+        "engr123",
+        "engr201",
+        "nwen241",
+        "nwen243",
+        "swen221",
+        "swen225",
+    ]
+    const content = document.getElementById("content");
+    pages.forEach(page => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = `./archive/${page}/index.html`;
+        a.innerText = page;
+        li.appendChild(a);
+        content.appendChild(li);
+    });
+</script>

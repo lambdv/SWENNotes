@@ -1,0 +1,716 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Engineering Technology ENGR101</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="7a06c483-1a16-4832-a9dc-aee2482a1eba" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">👨‍💻</span></div><h1 class="page-title"><strong><strong>Engineering Technology ENGR101</strong></strong></h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-created_time"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesCreatedAt"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM4.54102 8.91211H7.99316C8.30078 8.91211 8.54004 8.67285 8.54004 8.37207V3.8877C8.54004 3.58691 8.30078 3.34766 7.99316 3.34766C7.69238 3.34766 7.45312 3.58691 7.45312 3.8877V7.83203H4.54102C4.2334 7.83203 4.00098 8.06445 4.00098 8.37207C4.00098 8.67285 4.2334 8.91211 4.54102 8.91211Z"></path></svg></span>Created time</th><td><time>@July 13, 2023 3:20 PM</time></td></tr></tbody></table></header><div class="page-body"><ul id="3125d935-9577-40c2-b19c-1191fc940cfd" class="toggle"><li><details><summary>The Human Eye and Image Technology</summary><ul id="e6d0e556-18c1-4585-89da-89f398c13c40" class="toggle"><li><details><summary>Part 1: Seeing the light … Vision and Illusion</summary><p id="f134f57c-77e4-4ab3-bcf5-2670950a828c" class="">24/03/2023</p><figure id="8e24aad8-b827-4661-8295-276ecba1c9d0"><a href="https://vstream.au.panopto.com/Panopto/Pages/Viewer.aspx?id=07dd3916-53ed-4095-87f2-afb300036875" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Panopto</div><div class="bookmark-description">Capture, manage, and search all your video content.</div></div><div class="bookmark-href"><img src="https://vstream.au.panopto.com/Panopto/ContentCache/637666277856495000/_branding/a832b623-559a-4cc6-8356-ad2d0033803a/637666277772832339_favicon.ico" class="icon bookmark-icon"/>https://vstream.au.panopto.com/Panopto/Pages/Viewer.aspx?id=07dd3916-53ed-4095-87f2-afb300036875</div></div><img src="https://static-assets-cdn.i.au.panopto.com/Panopto/Cache/13.15.1.00003/Styles/Less/Application/Images/Header/PanoptoGlobe.png" class="bookmark-image"/></a></figure><figure id="20034753-c065-4b9b-814a-2b688ec82873"><a href="https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR101_2023T1/LectureSchedule/The_Human_Eye_and_Images_2023.pdf" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR101_2023T1/LectureSchedule/The_Human_Eye_and_Images_2023.pdf</div></div></a></figure><ul id="e3f5c7b3-d083-4d2b-aecb-e9ec30ae27e1" class="bulleted-list"><li style="list-style-type:disc">Like audio is made for the human ears, lights and visuals are made for the human eye</li></ul><ul id="49e50ae1-351e-48a4-8a1c-99226cae2264" class="toggle"><li><details><summary>Cameras</summary><ul id="7a58ebaa-2d7f-403a-a705-50913375be4c" class="bulleted-list"><li style="list-style-type:disc">Old faction cameras uses a lens which makes an image and displays it on a film. The film has photosensitive chemicals which react in the presence of light which is how it saves the image.</li></ul><figure id="b4e46dfd-c595-430a-8957-acaa3a09d1c2" class="image"><a href="Untitled.png"><img style="width:488px" src="Untitled.png"/></a></figure><ul id="e70e40bf-190a-4359-bff3-ae17ff09ff6f" class="bulleted-list"><li style="list-style-type:disc">New digital cameras uses a microchip with millions of light sensor on it <ul id="9c784dbb-ab26-48f2-bdab-d9aa0ba7ec02" class="bulleted-list"><li style="list-style-type:circle">a 6 mega pixel camera with a microchip with 24 million sensors on it </li></ul></li></ul><figure id="97477675-3fff-4a12-9eb6-6aac22027c0d" class="image"><a href="Untitled%201.png"><img style="width:892px" src="Untitled%201.png"/></a></figure></details></li></ul><ul id="cdda7ebc-db9d-4404-9fdb-935a015bfb42" class="toggle"><li><details><summary>Basic Structure of the eye</summary><ul id="8beccdff-87a8-43de-87e1-f5fde4d60231" class="bulleted-list"><li style="list-style-type:disc">the human eye is like a webcam<ul id="c5ce39c1-85b3-40ec-8094-e39b22e0c7c8" class="bulleted-list"><li style="list-style-type:circle">same size</li></ul><ul id="7e2993b5-d078-4996-ac81-5c40763cfae2" class="bulleted-list"><li style="list-style-type:circle">same shape</li></ul><ul id="2348b820-d357-492c-8c42-0377f09c23c4" class="bulleted-list"><li style="list-style-type:circle">works the same way</li></ul></li></ul><figure id="dc038f4b-b9f9-437b-8583-3a8357693f1f" class="image"><a href="Untitled%202.png"><img style="width:672px" src="Untitled%202.png"/></a></figure><h3 id="30cac32b-18c6-42bc-b97c-9e72de46cf57" class="">The Retina </h3><p id="90152ca9-49c6-4cae-8249-033371ed4dfd" class="">the retina has 2 types of light detectors</p><ul id="c1ee8e46-513f-4e19-b6c6-f85fcf6c0d85" class="bulleted-list"><li style="list-style-type:disc">rods<ul id="636f95ee-f13d-467d-bbb8-cc8a0bcbdf30" class="bulleted-list"><li style="list-style-type:circle">detect only gray scale</li></ul><ul id="eb9b34d4-5e45-468f-b414-ee1facf1d812" class="bulleted-list"><li style="list-style-type:circle">work well with dim light</li></ul><ul id="383eb41c-c27c-4bc3-8da2-f7a420a355a4" class="bulleted-list"><li style="list-style-type:circle">near the center of your vision</li></ul></li></ul><ul id="95f80036-447a-49b2-b25b-c58450f921da" class="bulleted-list"><li style="list-style-type:disc">cones<ul id="2863b32b-6fdc-45bb-9deb-fb82536f2606" class="bulleted-list"><li style="list-style-type:circle">detect color scale</li></ul><ul id="2078b7ce-5b1e-46ae-bca3-67f6d24bea81" class="bulleted-list"><li style="list-style-type:circle">don’t work well with dim light</li></ul><ul id="a8b49149-4f6f-4629-8502-b462ae8768b4" class="bulleted-list"><li style="list-style-type:circle">near the edge of your vision</li></ul></li></ul><figure id="e34ba3cd-c336-42a8-b9c2-3e3f7c55730b" class="image"><a href="Untitled%203.png"><img style="width:870px" src="Untitled%203.png"/></a></figure><h3 id="cfb3160f-0de0-40cb-8d1e-36c8b22d73a5" class="">eyes and cameras are very similar </h3><figure id="fd0021ca-72ac-4a51-9d25-2669af5f8a48" class="image"><a href="Untitled%204.png"><img style="width:927px" src="Untitled%204.png"/></a></figure><figure id="9c8c0dbe-a289-4947-848a-cb02659d41f0" class="image"><a href="Untitled%205.png"><img style="width:907px" src="Untitled%205.png"/></a></figure></details></li></ul><ul id="566a5f21-cf80-4885-ac1f-973f2c9de318" class="toggle"><li><details><summary>one way mirror</summary><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="71200baf-f5da-48af-8361-9fa7d2afef8c"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">A one-way mirror is made by coating a sheet of glass with a partially reflective layer of metal, allowing light to pass through in one direction while reflecting light in the other direction, creating the illusion of a mirror on one side and a window on the other side.</div></figure><ul id="4ef19c7d-1353-4c67-a588-836edf8b4a73" class="bulleted-list"><li style="list-style-type:disc">we saw this in orientation where there was a box with a green light inside and red on the outside which made it look like the mirror was showing that the light changed color in the mirror.<ul id="06b3d096-57e3-4330-94b3-1f96bf0172de" class="bulleted-list"><li style="list-style-type:circle">when we let light inside the mirror and change positions of the lights, the <mark class="highlight-teal">green </mark>+ <mark class="highlight-red">red </mark>light made <mark class="highlight-yellow">yellow </mark>light<ul id="bbbaa421-0a3c-4a1f-b966-ec528e05f667" class="bulleted-list"><li style="list-style-type:square">but this is wrong, in both color theory and low and high frequencies adding together don’t make a medium frequency.<ul id="98973a93-877f-474e-b711-eb6ba6ab7a46" class="bulleted-list"><li style="list-style-type:disc">this yellow is a fake <mark class="highlight-yellow">yellow</mark>.</li></ul></li></ul></li></ul></li></ul><ul id="7b485047-5e3a-4c99-86fa-86cb7f03037a" class="toggle"><li><details><summary>slides</summary><figure id="9823016d-53af-4385-8f20-ebd2ee6b165f" class="image"><a href="Untitled%206.png"><img style="width:902px" src="Untitled%206.png"/></a></figure><figure id="43ecc096-9ce4-446b-b7fa-64ec15421fb3" class="image"><a href="Untitled%207.png"><img style="width:928px" src="Untitled%207.png"/></a></figure><figure id="5e892034-e2c5-432f-9ec8-6885ece82714" class="image"><a href="Untitled%208.png"><img style="width:876px" src="Untitled%208.png"/></a></figure><figure id="1cc15290-fccd-4443-91ed-34e3989c32a6" class="image"><a href="Untitled%209.png"><img style="width:920px" src="Untitled%209.png"/></a></figure><figure id="023602ae-9434-4595-8235-d403ec160dfb" class="image"><a href="Untitled%2010.png"><img style="width:853px" src="Untitled%2010.png"/></a></figure><p id="e732425f-dff7-4a3a-83bc-143490dce3e4" class="">
+</p></details></li></ul></details></li></ul><ul id="3c05fb1f-9cc1-4514-81a6-a622577227cd" class="toggle"><li><details><summary>primary colors</summary><ul id="b7b55cf9-bc08-4637-8b3a-8e4fa9f8c746" class="bulleted-list"><li style="list-style-type:disc">real <mark class="highlight-orange">yellow </mark>is seen in things like street lamps and the rainbow.<ul id="09267c00-34bf-43e1-83b9-c2f90c12f50e" class="bulleted-list"><li style="list-style-type:circle">however computer monitors and led’s don’t make real <mark class="highlight-yellow">yellow </mark>it makes fake yellow.<ul id="51688d56-6b77-4028-84dd-9dc6f5f3d05e" class="bulleted-list"><li style="list-style-type:square">this fake yellow is called <mark class="highlight-yellow">“perspective” yellow</mark></li></ul></li></ul><figure id="4eccf9af-79ce-46b6-a0d8-1d72a3ee2359" class="image"><a href="Untitled%2011.png"><img style="width:804px" src="Untitled%2011.png"/></a></figure><ul id="bc324717-7940-462e-9c38-dcfa2335d096" class="toggle"><li><details><summary>How does the fake yellow work?</summary><ul id="6676cd0b-ad4a-47c4-bed4-ee2874b804db" class="bulleted-list"><li style="list-style-type:disc">your eyes have 3 flavors of cones<ul id="37d52130-9c94-43f6-aacd-24b629c285a0" class="bulleted-list"><li style="list-style-type:circle">red sensitive cones</li></ul><ul id="3bf3dcad-69b3-4f17-a58f-dcf36360efaf" class="bulleted-list"><li style="list-style-type:circle">green sensitive cones</li></ul><ul id="e93e972b-dc4a-4719-bb0d-4b6afa19aad8" class="bulleted-list"><li style="list-style-type:circle">blue sensitive cones<ul id="e72e0faf-cf09-4e1b-b0a9-acac1ffb9737" class="bulleted-list"><li style="list-style-type:square">this makes RGB</li></ul><ul id="9f283e4a-3a95-4fb8-aac1-4b28de2202dd" class="bulleted-list"><li style="list-style-type:square">these cones overlap</li></ul></li></ul></li></ul><figure id="58477884-c877-45db-9ee3-464032e21135" class="image"><a href="Untitled%2012.png"><img style="width:912px" src="Untitled%2012.png"/></a></figure><ul id="c3003252-f78a-4ec3-bd3f-fd8adc53283c" class="bulleted-list"><li style="list-style-type:disc">art teachers say the primary colors are red, yellow and blue<ul id="83ef20d2-ec2e-455c-aeba-e52bd3f827cf" class="bulleted-list"><li style="list-style-type:circle">Howard claims that they are actually red, green and blue<ul id="dcbc0f28-880d-48dc-b755-dd5cab21ac3c" class="bulleted-list"><li style="list-style-type:square">what makes red, green and blue primary colors?<ul id="a83b7178-30ad-4263-b01e-7b975f6995d5" class="bulleted-list"><li style="list-style-type:disc">they is nothing special about them. they are just apart of the electromagnetic spectrum.<ul id="5e526de1-263b-49f4-80b4-99627bb32363" class="bulleted-list"><li style="list-style-type:circle">they are not primary colors BUT TO US they are<ul id="34c764f0-e93a-404d-9f74-8adbc0ae2c8c" class="bulleted-list"><li style="list-style-type:square">because we have RGB sensitive cones </li></ul></li></ul></li></ul></li></ul></li></ul></li></ul><h3 id="f4753d51-e37f-44cc-b774-03ac0b951b56" class="">How to actually make fake yellow</h3><figure id="ffa6e1b2-301e-4555-b6cb-42565a577839" class="image"><a href="Untitled%2013.png"><img style="width:912px" src="Untitled%2013.png"/></a></figure><p id="957cfc1f-aaad-488f-8fde-57b4bf7aabd3" class="">when you shine red light in your eyes, the red cones will send data to your brain</p><figure id="957b0eb7-91c4-4357-a804-40f5f41c017d" class="image"><a href="Untitled%2014.png"><img style="width:910px" src="Untitled%2014.png"/></a></figure><p id="a331b829-8b21-4d5e-b5c8-527ed0d02147" class="">you shine green light in your eyes, the green cones will send data to your brain</p><figure id="8d3a66fa-d903-4958-8a43-5a3118b10eac" class="image"><a href="Untitled%2015.png"><img style="width:928px" src="Untitled%2015.png"/></a></figure><p id="a5dd262d-fa74-40ff-8988-27f6e84dfeb6" class="">if you shine real yellow light into your eyes, then your green and red cones together will send data to your brain</p><figure id="95dac7f9-5903-43d0-9f24-94d95cfec52b" class="image"><a href="Untitled%2016.png"><img style="width:907px" src="Untitled%2016.png"/></a></figure><p id="fd781a5b-c7fd-4616-86f3-641a271222ec" class="">red and green light both being shined in your eyes will have the same effect as yellow light shined in your eyes.</p><ul id="084eec15-a5a0-4b5d-8c4e-8939174887c7" class="bulleted-list"><li style="list-style-type:disc">the red and green cones will react</li></ul><p id="859968ae-b1d2-4acc-93bf-a79eb9bcf82d" class="">so we see fake light</p><figure id="7b0ad714-49ee-48e6-abab-10f834af956d" class="image"><a href="Untitled%2017.png"><img style="width:951px" src="Untitled%2017.png"/></a></figure></details></li></ul></li></ul></details></li></ul><p id="8f206e22-79ff-4f71-a6be-2d056fb2e5e4" class="">
+</p></details></li></ul><ul id="641e8d92-e3e1-4ed6-98e9-dd7d770ef70f" class="toggle"><li><details><summary>Part 2: What is an image?</summary><p id="b5632edc-4687-4719-b69b-9559791db053" class="">24/03/2023</p><figure id="0824d57d-a0b6-484d-8ad6-adf1b01349bd"><a href="https://vstream.au.panopto.com/Panopto/Pages/Viewer.aspx?id=07dd3916-53ed-4095-87f2-afb300036875" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Panopto</div><div class="bookmark-description">Capture, manage, and search all your video content.</div></div><div class="bookmark-href"><img src="https://vstream.au.panopto.com/Panopto/ContentCache/637666277856495000/_branding/a832b623-559a-4cc6-8356-ad2d0033803a/637666277772832339_favicon.ico" class="icon bookmark-icon"/>https://vstream.au.panopto.com/Panopto/Pages/Viewer.aspx?id=07dd3916-53ed-4095-87f2-afb300036875</div></div><img src="https://static-assets-cdn.i.au.panopto.com/Panopto/Cache/13.15.1.00003/Styles/Less/Application/Images/Header/PanoptoGlobe.png" class="bookmark-image"/></a></figure><figure id="8944918e-4152-4809-84ea-f9a1c66924f1"><a href="https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR101_2023T1/LectureSchedule/The_Human_Eye_and_Images_2023.pdf" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR101_2023T1/LectureSchedule/The_Human_Eye_and_Images_2023.pdf</div></div></a></figure><p id="327c7a2f-7361-4cee-abaf-4554a3fbb5d0" class="">with the knowledge from part 1, we can use that information to get into more computer science stuff</p><ul id="203ca00e-e6c0-4289-a51f-24cd0522c4e5" class="toggle"><li><details><summary>What is an image?</summary><ul id="704dcd0d-8e68-4b04-b4eb-972290a5f5b2" class="bulleted-list"><li style="list-style-type:disc">on a computer screen all it has to do is display a combination<strong><strong><strong><strong> </strong></strong></strong></strong>RGB light to trigger our cones to make images of different colors</li></ul><ul id="fa0a3cec-361d-4ccb-9d17-4e42b3e5a121" class="toggle"><li><details><summary>On a screen</summary><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="32be962e-dff7-4384-b771-05a4f2b3cba4"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">A lot of little colour patches called “pixels” that each contain a red<br/>light, green light, blue light. Fools us into seeing colours – called<br/>“perceptive colours.”<br/></div></figure></details></li></ul><ul id="f2dc45ec-3d97-4969-abe4-8a5124e35523" class="toggle"><li><details><summary>In memory</summary><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d53aef7a-61f1-4673-bf76-2bcd79b10843"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">An array with colour numbers calculated from</div></figure><figure id="b4fd622e-c0b0-4667-b672-b99a04266de8" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>C</mi><mi>o</mi><mi>l</mi><mi>o</mi><mi>u</mi><mi>r</mi><mo>=</mo><mi>R</mi><mo>∗</mo><mn>256</mn><mo>∗</mo><mn>256</mn><mo>+</mo><mi>G</mi><mo>∗</mo><mn>256</mn><mo>+</mo><mi>B</mi><mo>=</mo><mn>10092339</mn></mrow><annotation encoding="application/x-tex">Colour = R*256*256 + G*256 + B = 10092339 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">256</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">256</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">256</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">10092339</span></span></span></span></span></div></figure></details></li></ul><ul id="d5be15fe-bf8a-472d-bbc1-ecee9095fa77" class="toggle"><li><details><summary>On paper</summary><p id="a6346510-5565-4012-9a9b-7f9072c6faff" class="">Something about CMYK?? We’ll talk about that in tutorial.</p></details></li></ul><figure id="46d91dc9-2096-4129-92d7-b35a1514a9c3" class="image"><a href="Untitled%2018.png"><img style="width:931px" src="Untitled%2018.png"/></a></figure><figure id="a9d40343-decf-4ce9-913c-0967aa27d42a" class="image"><a href="Untitled%2019.png"><img style="width:937px" src="Untitled%2019.png"/></a></figure><ul id="de517125-23ba-47fc-9185-9cc45a8069ac" class="bulleted-list"><li style="list-style-type:disc">yellow on an image being displayed on a computer monitor is just made up of small red and green lights </li></ul><ul id="77d76aac-c484-43a7-ad49-c6e41e9e2a0e" class="bulleted-list"><li style="list-style-type:disc">the small lights are called pixels<ul id="f4d28d83-369f-4987-8290-60555e2759f1" class="bulleted-list"><li style="list-style-type:circle">each pixels have little red, blue and green lights it can turn on and off with specified brightness<ul id="40a34376-78f1-4fcb-b5dc-21daef9ba4fe" class="bulleted-list"><li style="list-style-type:square">for example we can make <mark class="highlight-pink">pink </mark>by turning on the <mark class="highlight-red">red </mark>and a small amount of <mark class="highlight-blue">blue </mark>and <mark class="highlight-teal">green</mark></li></ul><ul id="22354c05-7ec9-4e38-b731-5835af434528" class="bulleted-list"><li style="list-style-type:square">make white by turning on all red green and blue to full </li></ul><ul id="e5c52270-2850-401c-8557-c3547c4e4668" class="bulleted-list"><li style="list-style-type:square">make black by turning all red green and blue off</li></ul></li></ul></li></ul><figure id="4a11d27f-7203-4237-804c-49d53d65f629" class="image"><a href="Untitled%2020.png"><img style="width:899px" src="Untitled%2020.png"/></a></figure><ul id="e9919be5-cae2-4931-bcd6-fcb6b5291c42" class="bulleted-list"><li style="list-style-type:disc">This is an image made with 20x20 = 400 pixels<ul id="b838a708-2c85-4343-9b52-36101a15f430" class="bulleted-list"><li style="list-style-type:circle">this means that 400 pixels/small lights are turned on to different amounts to make this image</li></ul></li></ul><figure id="0808e481-86d2-4a9b-92a0-9f81ba28256a" class="image"><a href="Untitled%2021.png"><img style="width:938px" src="Untitled%2021.png"/></a></figure><ul id="0cab1eea-4708-4cdc-861e-7fc45d9eb40d" class="bulleted-list"><li style="list-style-type:disc">in the memory this is an array  </li></ul><blockquote id="d3e225de-313f-4f55-bcc3-dd110282645a" class="">an 1d array is a column in an excel spreadsheet</blockquote><blockquote id="eb43eeab-0164-4e67-9c6a-7e3f4876b88c" class="">a 2d array is the whole spreadsheet</blockquote><blockquote id="262acc6c-be18-4edf-bf24-9451c7a3928d" class="">a 3d array is multiple spreadsheet on top of each other</blockquote><ul id="b6c3ce9f-3caf-4e4e-8cfa-820eb539fcd2" class="bulleted-list"><li style="list-style-type:disc">each pixel is 1 byte <ul id="f8bd2c32-8adb-4c04-aaa5-e958382b110c" class="bulleted-list"><li style="list-style-type:circle">255 colors</li></ul></li></ul><ul id="6dff35aa-a2d7-4d69-b8ce-60f89ce9a505" class="bulleted-list"><li style="list-style-type:disc">each array element holds a number which specifies the color</li></ul><p id="cb14dfd0-0813-42e1-9348-7c58b004d338" class="">however there is a problem here</p><ul id="2cce9f9b-fc5e-4ec7-85ac-29ab0500cfb9" class="bulleted-list"><li style="list-style-type:disc">how are we going to store 3 colors in 1 array element?<ul id="edb57724-4b87-4025-8fb4-4eb759a6edf7" class="bulleted-list"><li style="list-style-type:circle">we have 3 arrays for each color, <ul id="fd088a85-978d-4418-b62e-563bb1d0fbd2" class="bulleted-list"><li style="list-style-type:square">R array for the red color</li></ul><ul id="a4b2ce03-ec4d-46a9-aed1-7bb90fc12331" class="bulleted-list"><li style="list-style-type:square">G array for the green color</li></ul><ul id="9e76ece8-2ad9-4ab8-bf51-5b96788c16c7" class="bulleted-list"><li style="list-style-type:square">B array for the blue color</li></ul></li></ul></li></ul><ul id="bb98c182-9641-4bbb-a1d7-b2cd71ca7092" class="bulleted-list"><li style="list-style-type:disc">is there a way to put all 3 numbers in an array element?<ul id="b9f3b794-382c-4787-80f4-a28db32efe65" class="bulleted-list"><li style="list-style-type:circle">first number will be multiplied by 1</li></ul><ul id="e7a75525-a414-456e-bd98-5dd05bd48a77" class="bulleted-list"><li style="list-style-type:circle">second number will be multiplied by 255</li></ul><p id="305bdc57-1f51-430b-9fcb-78fb8bcc3746" class="">this is called bit shifting </p><figure id="41ad26a3-0e8f-43c9-a121-ade23885ab2f" class="image"><a href="Untitled%2022.png"><img style="width:920px" src="Untitled%2022.png"/></a></figure><p id="9dd9e546-4e1c-4bfd-a39d-e2404a17e72b" class="">converting the amount of RGB to binary</p><figure id="9242829c-f0eb-4c8d-8aa2-6ba477b070ab" class="image"><a href="Untitled%2023.png"><img style="width:919px" src="Untitled%2023.png"/></a></figure><figure id="56c7f148-2c44-4939-8202-0cdd2e0cc04c" class="image"><a href="Untitled%2024.png"><img style="width:890px" src="Untitled%2024.png"/></a></figure><p id="46ca7d58-1158-4849-9f1a-337620018d5e" class="">how to do decimal shifting</p><figure id="b9347b0d-d806-4cda-b7e1-8bf458f1ffa2" class="image"><a href="Untitled%2025.png"><img style="width:1195px" src="Untitled%2025.png"/></a></figure><p id="1b7adca4-8132-4f1b-b5b2-b30df79ae2b8" class="">this is the same thing for bit shifting but you shift by 8 digits</p></li></ul></details></li></ul><p id="d020fe9f-1993-47bc-8ba0-5211ec73e995" class="">
+</p></details></li></ul><ul id="12c5f2fc-bb5e-47ef-80fd-5c09436e7e40" class="toggle"><li><details><summary>Image Resolution</summary><figure id="a3cd3141-f6c9-45d1-b38a-3a093f8e7e05"><a href="https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR101_2023T1/LectureSchedule/Resolution_Eye_2023.pdf" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR101_2023T1/LectureSchedule/Resolution_Eye_2023.pdf</div></div></a></figure><ul id="a628bf70-5f71-4fda-9fc7-004f0a435bfc" class="toggle"><li><details><summary>monday</summary><p id="77f24ac9-49e7-48d7-be0f-7f945e940bf9" class="">dimensionless: type of quality</p><p id="64c85e68-126a-46ab-b2af-f0577a180b46" class="">Units: defined amount of something</p><figure id="5178f987-49b6-480f-bc91-112d1769f27e" class="image"><a href="Untitled%2026.png"><img style="width:1328px" src="Untitled%2026.png"/></a></figure><ul id="b0f503e7-5119-4f0b-a94e-f8b44c03d650" class="toggle"><li><details><summary>Angles</summary><p id="5afa64fe-a241-4df1-bcf3-0edc102071e4" class="">angles are dimensionless quality.<div class="indented"><p id="610da664-e917-4eb7-b782-39575fffe383" class="">so radians do not ned to balance or cancel on both sides of the equation </p></div></p><p id="7d044812-7ed7-473b-8981-d192470eb200" class="">but it can have units</p><p id="7de1554c-c4dd-438f-9524-ea6f8c2f4520" class="">there are two types of units to measure angles</p><ul id="da55d99d-bafb-4fb1-a6fe-a3245cec3a10" class="bulleted-list"><li style="list-style-type:disc">degrees </li></ul><ul id="e2ac5cab-d3da-4ade-8e71-e5ff045eb21a" class="bulleted-list"><li style="list-style-type:disc">raidens</li></ul><p id="de27b430-3275-421a-9765-93151cd03e48" class="">
+</p><figure id="ba54659f-1bac-4ffe-b995-d8eedb735a3d" class="image"><a href="Untitled%2027.png"><img style="width:1202px" src="Untitled%2027.png"/></a></figure><figure id="7a9c9a4d-1601-441e-95f3-ac7c67e1634e" class="image"><a href="Untitled%2028.png"><img style="width:1158px" src="Untitled%2028.png"/></a></figure><figure id="9aa719d7-a847-4ef4-85a5-79d12f7e8d66" class="image"><a href="Untitled%2029.png"><img style="width:960px" src="Untitled%2029.png"/></a></figure><p id="a0b29d32-8450-4c85-8e57-536f51cc5add" class="">
+</p></details></li></ul></details></li></ul><ul id="9c11866e-88e7-4138-b1ca-51578bcf6fca" class="toggle"><li><details><summary>Spatial Resolution</summary><figure id="426027db-f7e0-4563-91ba-366c6d7aa177" class="image"><a href="Untitled%2030.png"><img style="width:1848px" src="Untitled%2030.png"/></a></figure><p id="b2ccfd49-90c3-49c5-adad-43c91634b697" class="">two light bulbs next to each other, we can resolve them if they are close to your eyes. if they are far away then they look like one.</p><figure id="f4403ee6-1afe-4805-8f48-359f6efcb4dc" class="image"><a href="Untitled%2031.png"><img style="width:1446px" src="Untitled%2031.png"/></a></figure><figure id="861392f7-fc50-425b-80f0-24d2d41adac9" class="image"><a href="Untitled%2032.png"><img style="width:1048px" src="Untitled%2032.png"/></a></figure><figure id="ef40b2ce-fbd3-4a62-9ea2-490935f558f7" class="image"><a href="Untitled%2033.png"><img style="width:1032px" src="Untitled%2033.png"/></a></figure></details></li></ul><ul id="033f562f-0a98-4b3a-92a7-ad1f9ff6cccb" class="toggle"><li><details><summary>Measuring Visual Acuity</summary><blockquote id="2e001ae4-a426-4771-9206-fd95ad4b4bb2" class="">We measured the angle needed for red and green LEDs to be<br/>distinguished for a few students. Found 10-3 radians in a rough<br/>experiment.<br/><br/><mark class="highlight-red">Accepted value = 3x10-4 radians or 1/60th of a degree.</mark><br/>Note this depends on viewing conditions and varies between<br/>individuals, but this is the right order of magnitude and will<br/>serve as our “benchmark.”<br/>The concepts are mostly independent of the exact value.<br/>Now we want to explore the implications of this measurement<br/>for storing and transmitting digital images.<br/></blockquote></details></li></ul><ul id="e48a90a3-74b4-468e-9a64-7e97f744d0d9" class="toggle"><li><details><summary>A Digital Photograph</summary></details></li></ul><ul id="c7e218f9-8ef4-4950-aa5d-2382ba314050" class="toggle"><li><details><summary>worksheet answers </summary><ul id="f1e30252-30d9-48ab-b863-a45bcac94024" class="toggle"><li><details><summary>1</summary><figure id="cf9b9159-aed2-4c41-9722-99ed6662d697" class="image"><a href="Untitled%2034.png"><img style="width:1050px" src="Untitled%2034.png"/></a></figure></details></li></ul><ul id="9fcb871a-8d8f-4df6-a08d-d9936d4b5f5e" class="toggle"><li><details><summary>2</summary><figure id="99971cf3-4cd2-45c4-ac7b-249d755fe045" class="image"><a href="Untitled%2035.png"><img style="width:1312px" src="Untitled%2035.png"/></a></figure></details></li></ul><ul id="404479b4-4392-420a-bb61-41b0527fa27f" class="toggle"><li><details><summary>3</summary><figure id="5279689f-527e-436d-bee5-4cb231c256ca" class="image"><a href="Untitled%2036.png"><img style="width:1292px" src="Untitled%2036.png"/></a></figure></details></li></ul><ul id="df1f5cfa-5da0-49f5-8c02-7d54c12ab26b" class="toggle"><li><details><summary>4</summary><figure id="40b84515-da48-4e74-8b53-6768af93ab1e" class="image"><a href="Untitled%2037.png"><img style="width:856px" src="Untitled%2037.png"/></a></figure></details></li></ul><ul id="f3d3f241-2042-40a7-9d94-87caf90b09e6" class="toggle"><li><details><summary>5</summary><figure id="6a8ef3cf-c0c5-42ed-9658-61c8b33898f8" class="image"><a href="Untitled%2038.png"><img style="width:646px" src="Untitled%2038.png"/></a></figure></details></li></ul><ul id="a020f64a-e8d1-4d29-96cd-194feb6ae4d2" class="toggle"><li><details><summary>movie</summary><figure id="9d7a7575-106d-444c-bb5a-3810ff3e43b6" class="image"><a href="Untitled%2039.png"><img style="width:1058px" src="Untitled%2039.png"/></a></figure></details></li></ul></details></li></ul></details></li></ul><ul id="059b4812-c721-4fee-ac27-432c74772710" class="toggle"><li><details><summary>Data Compression Image</summary><figure id="4f48ba2c-6689-40ec-943b-d79d21af3b6a"><a href="https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR101_2023T1/LectureSchedule/Data_Compression_2023.pdf" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR101_2023T1/LectureSchedule/Data_Compression_2023.pdf</div></div></a></figure><ul id="c37f1958-0299-4e91-af68-fc4eb15d8cdc" class="bulleted-list"><li style="list-style-type:disc">remember that a video is just multiple images which are arrays of colors </li></ul><ul id="8109e194-0c5f-4ad9-9918-9496701488ae" class="bulleted-list"><li style="list-style-type:disc">data compression is to reduce redundancy, having to repeat information more than once or already known. this is known as “information theory”</li></ul><ul id="c2583fc7-bb42-4814-b373-1cd0a2cdf429" class="toggle"><li><details><summary>Math needed</summary><ul id="6149590b-4f19-4555-b696-616d751225f3" class="toggle"><li><details><summary>Probability</summary><figure id="d0da240b-9263-493f-8854-43d65d1ac333" class="image"><a href="Untitled%2040.png"><img style="width:945px" src="Untitled%2040.png"/></a></figure></details></li></ul><ul id="a1a485cd-1aa1-4571-8c96-7c80ab8e5df4" class="toggle"><li><details><summary>Independent Events</summary><figure id="a433f271-36f6-4925-9473-dc30798d1353" class="image"><a href="Untitled%2041.png"><img style="width:943px" src="Untitled%2041.png"/></a></figure></details></li></ul></details></li></ul><ul id="964050e5-5bd7-430e-b7fb-63491ac06868" class="toggle"><li><details><summary>Example Data Compression</summary><p id="e0bd4202-686f-4832-8ca4-171fb08391f8" class="">because we know that data compression is about sending pure information, no redundancy and no repeating information we already know</p><p id="478d763e-8d34-4d6f-8d9d-fbfedd86f01f" class="">there is an example of data compression:</p><p id="2705f4f9-ddd9-438f-b2df-8829fdd2cea3" class="">
+</p><p id="fe7cc5f8-02e5-4595-9f13-374ecfab9319" class="">in a hamburger stand, a customer wanting veggie and meat burger is 50% 50%, so instead of recording this long string of numbers:</p><figure id="5057718a-0863-45b2-8498-132d4c65f671" class="image"><a href="Untitled%2042.png"><img style="width:565px" src="Untitled%2042.png"/></a></figure><p id="428212ed-6fbe-47ca-847a-3b40f00de800" class="">because each customer is independent at a fixed probability </p><figure id="8881467b-fd9f-4677-891d-ee3701b83cd6" class="image"><a href="Untitled%2043.png"><img style="width:952px" src="Untitled%2043.png"/></a></figure><figure id="26a63a14-5354-4f90-acf7-4a690275aa72" class="image"><a href="Untitled%2044.png"><img style="width:926px" src="Untitled%2044.png"/></a></figure><p id="ecb9a2f2-6508-4e56-9313-e099b38a7d19" class="">in this case, an order is 80% chance of being vegi, what we can do is group everyone in pairs which results in this table here:</p><figure id="46cc72ee-f47d-469f-996f-315514ebd963" class="image"><a href="Untitled%2045.png"><img style="width:133px" src="Untitled%2045.png"/></a></figure><p id="3b8621cd-4529-4a8b-9d7d-2d2a7ffac514" class="">this does look like we might need to send more bits than before but</p><p id="cb6f8f7d-cb78-40ad-87e8-17c60d7a0285" class="">because v will be 80% of the time, vv is going to be 80% * 80% = 64% of the time we are saving bits by only having to send a 0. </p><p id="961f1c92-92c7-4d0c-a4e2-99365e88b8db" class="">this does mean that 20% of the time we have to send more data</p><p id="ee084246-56be-4eb9-9791-74522979128b" class="">16% of the time we break even</p><figure id="8745cf81-114e-496e-bf76-33315848078d" class="image"><a href="Untitled%2046.png"><img style="width:930px" src="Untitled%2046.png"/></a></figure><p id="e42bbcbb-e65c-4613-b6db-f0f69fb77a42" class="">so overall, on average we save more bits in this case because we already know that vv is more likely </p><figure id="99c160ba-38bf-4737-9945-3fa3a9ab54da" class="image"><a href="Untitled%2047.png"><img style="width:795px" src="Untitled%2047.png"/></a></figure><ul id="8816bd51-106c-4897-bfea-630d580ec87a" class="bulleted-list"><li style="list-style-type:disc">28 bits when uncompressed, 20 bits when compressed.</li></ul><p id="86bf0aa2-0edb-43d3-a7d9-8204f8903aa7" class="">how get the data from the compressed string back to information:</p><figure id="94f4b05a-b63b-420a-b86a-ab7444e24c64" class="image"><a href="Untitled%2048.png"><img style="width:888px" src="Untitled%2048.png"/></a></figure></details></li></ul><ul id="fe0c502b-485b-4c74-8688-db8546b92f66" class="toggle"><li><details><summary>Theory</summary><figure id="7a7fd058-79e0-488e-a25c-1d319e4389ce" class="image"><a href="Untitled%2049.png"><img style="width:939px" src="Untitled%2049.png"/></a></figure><ul id="fa7eb133-735b-47c9-bfcc-cf65f9d6dce7" class="bulleted-list"><li style="list-style-type:disc">in theory with 80% 1s and 20% 0s the information contents turns out to be 0.71 bits of into per bits of data</li></ul></details></li></ul><ul id="a7d596e0-1dca-4f23-a0a2-b6f3876bef69" class="toggle"><li><details><summary>An Important Idea</summary><figure id="00031f32-af74-424d-87f7-d258e73ea360" class="image"><a href="Untitled%2050.png"><img style="width:939px" src="Untitled%2050.png"/></a></figure><p id="234d890a-0bbf-42bf-a076-94cade90ae24" class="">lossless data compression uses complex algorithms, however the idea is still the same</p><ul id="87fd8784-00ad-40a1-8dda-31f06919722e" class="bulleted-list"><li style="list-style-type:disc">the information is pure</li></ul><ul id="662f4729-f72e-4f6a-bef8-60a3608c78c2" class="bulleted-list"><li style="list-style-type:disc">while getting rid of redundant data</li></ul><p id="d031f205-a86a-4bbe-a8b7-16496f0c70fe" class="">
+</p></details></li></ul><ul id="e8888def-a83b-4eba-8261-0860d00f6d55" class="toggle"><li><details><summary>Lossless Image Compression</summary><figure id="50601e0c-1731-471c-94f5-4eac4705ac9e" class="image"><a href="Untitled%2051.png"><img style="width:948px" src="Untitled%2051.png"/></a></figure><p id="01ca7c11-0075-44b1-b5de-21615c9991bc" class="">we can use this idea to reduce the size of images, reducing redundant bits while maintaining the same pure information via compressing the color arrays. finding the probability of the frequency and variation of pixel colors</p><p id="19bff40f-b1e0-4e34-a277-4d631ae356eb" class="">on top of this, in a movie, if there isn’t much movement then we can use the same bits for each frame of the movie without having to store bits for each of them, only certain parts. you can predict the value of the pixel in the next frame reliably which is redundancy we can remove. </p></details></li></ul><ul id="7ca6b62d-6d2b-425c-82df-0fced4c1ef20" class="toggle"><li><details><summary>Lossy Image Compression </summary><p id="3e0428d3-f2f4-46d5-90d6-6f6fdb12cc14" class="">if lossless image compression lets you gain the pure information back fully then why wouldn’t you use it?</p><p id="16b1f7c1-95e0-42b9-9515-0b7ac6048e33" class="">the reason to not use it is that for small files the processing overhead can be overkill from what you see/get out of it.</p><figure id="4a4a969c-6dd4-48ab-a17b-deb67ab50cd9" class="image"><a href="Untitled%2052.png"><img style="width:925px" src="Untitled%2052.png"/></a></figure><figure id="88a9cc1c-c5d1-4071-a9ae-dea489cb72af" class="image"><a href="Untitled%2053.png"><img style="width:920px" src="Untitled%2053.png"/></a></figure><p id="49392aa7-f56b-410e-bed7-ea624ccd545c" class="">things such as music and images can accept some loss of pure information for even less bits. this is because you as a human might not notice the difference. (information we don’t care about)</p></details></li></ul><ul id="47c89f4d-1886-4ac5-839d-03155aef2427" class="toggle"><li><details><summary>Summary</summary><figure id="7abc9d5f-e15f-4281-9c39-2dc9c051c529" class="image"><a href="Untitled%2054.png"><img style="width:935px" src="Untitled%2054.png"/></a></figure></details></li></ul></details></li></ul><ul id="0903266c-a036-4d86-a814-9fb63010f237" class="toggle"><li><details><summary>Movie Compression</summary><figure id="cfec5564-933f-44c6-a88f-bca2a0e8abed"><a href="https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR101_2023T1/LectureSchedule/Image_and_Movie_Compression_2023.pdf" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR101_2023T1/LectureSchedule/Image_and_Movie_Compression_2023.pdf</div></div></a></figure><ul id="f51c9ab0-95fd-4b48-a83b-57014a3f9f6f" class="bulleted-list"><li style="list-style-type:disc">we can look at a variety of different algorithms to optimize lossy compression so that we loss a lot of bits but maintain the most pure information we can that is acceptable for human consumption</li></ul><ul id="b22fdcca-8b1c-469d-bfd4-4e8a8a0fae1b" class="toggle"><li><details><summary>Image and Movie Compression</summary><figure id="6538018a-87fa-43e0-9ac0-71f8e240b5c5" class="image"><a href="Untitled%2055.png"><img style="width:946px" src="Untitled%2055.png"/></a></figure><blockquote id="4ee05408-f52e-47c1-a984-0c9986967de8" class="">in this image, there is a lot of redundancy, its all white and black. we can reduce it by using information we already know instead of having to have bits for all the white space.</blockquote><figure id="88751ecd-d4c2-4ee9-95af-0fe0a1142bad" class="image"><a href="Untitled%2056.png"><img style="width:897px" src="Untitled%2056.png"/></a></figure><blockquote id="8f9971f4-ed1f-4144-8668-e959f3a9f0c5" class="">a movie with poor quality, when uncompressed is very large, not including sounds information </blockquote><ul id="53912f57-b330-4ae4-8b9e-89f6cfc3db46" class="toggle"><li><details><summary>Simple Compression Method: <mark class="highlight-red">Run Length Encoding</mark></summary><figure id="efa778fb-1be4-4dfe-97a3-b74621dc609b" class="image"><a href="Untitled%2057.png"><img style="width:945px" src="Untitled%2057.png"/></a></figure><ul id="24093cbc-c40e-40bb-958e-defdcc9c3d1e" class="bulleted-list"><li style="list-style-type:disc">run length encoding is a method used on images</li></ul><ul id="57258949-7181-4943-83f3-f4946f2d2344" class="bulleted-list"><li style="list-style-type:disc">this is done by storing the length of images that are the same</li></ul><ul id="7c1f0cb6-1d65-48de-b19e-e806c1f29ebf" class="bulleted-list"><li style="list-style-type:disc">works well for text based images</li></ul><ul id="aee202fc-b41c-4aff-82b8-1687a290912d" class="toggle"><li><details><summary>lossy compression example</summary><figure id="13dee56f-e3ff-4c8e-89a1-a7d33c483f5b" class="image"><a href="Untitled%2058.png"><img style="width:938px" src="Untitled%2058.png"/></a></figure><ul id="e8842db4-46be-48eb-b698-3cd783bd08f6" class="bulleted-list"><li style="list-style-type:disc">when there are alot of identical pixels, what if we just go through them all and every pixel with a r (red) is 249-251, we change them all to 250<ul id="63773023-21a9-47e7-b700-298f4d403669" class="bulleted-list"><li style="list-style-type:circle">this is run length encoding for lossy compression </li></ul></li></ul></details></li></ul></details></li></ul><p id="5ffda82c-2d63-41d1-bf87-e5e265f1635c" class=""><br/><br/></p><p id="aff49ef1-c6a2-4a88-be38-c91fd4663954" class="">
+</p></details></li></ul><ul id="84a9b062-1961-41e7-acf1-c2cf8c2604ef" class="toggle"><li><details><summary>JPG</summary><p id="b132462d-b4f9-4a08-bea1-f325e7b5538c" class="">JPEG stands for Joint Photographic Experts Group</p><blockquote id="2f0ce784-dc15-4a80-9dca-8e435e1d2560" class="">A standard that actually includes multiple <mark class="highlight-blue">lossless </mark>and<br/><br/><mark class="highlight-blue">lossy </mark>data compression routines that are adapted to the<br/>content of a particular image.<br/></blockquote><ul id="6d4109fc-a99e-44dd-9f00-67c706211bb8" class="bulleted-list"><li style="list-style-type:disc">it uses a lot of different algorithms and adapts itself around which is more optimal/depending on the contents of the image</li></ul><ul id="a7a8b5e6-dfb8-414e-87ad-a8e43ef05715" class="toggle"><li><details><summary>JPG lossy</summary><figure id="2f015264-6bb9-40b8-aaef-fc48f22dc0fc" class="image"><a href="Untitled%2059.png"><img style="width:947px" src="Untitled%2059.png"/></a></figure><ul id="7486a07b-f1c8-4674-acc0-f2f25d61fcb2" class="bulleted-list"><li style="list-style-type:disc">we find out the different variations of data in the file<ul id="b5cdc4bf-7862-49cd-a3dd-23d53629ced4" class="bulleted-list"><li style="list-style-type:circle">Rapid variations</li></ul><ul id="5b2be32c-4a0f-4db8-9f53-f75c593a4d2b" class="bulleted-list"><li style="list-style-type:circle">Medium variations</li></ul><ul id="d2941a95-8e04-46b5-8d2a-decf86676acd" class="bulleted-list"><li style="list-style-type:circle">Slow variations</li></ul></li></ul><ul id="60803f4e-efeb-4a1a-89a8-108423c3ccc8" class="bulleted-list"><li style="list-style-type:disc">we could find that we could remove Rapid variations (change very fast) or Slow variations (change slowly). but this does depend on the context.<ul id="c47e5c75-6c54-44ab-bf7d-6fa6f2993042" class="bulleted-list"><li style="list-style-type:circle">example: remove gradual background change</li></ul></li></ul></details></li></ul><ul id="30f40028-34f7-4626-bc82-086b09a4cfab" class="toggle"><li><details><summary>File Types for Images</summary><figure id="cc4b139e-bcff-4285-9459-a01a81c976d6" class="image"><a href="Untitled%2060.png"><img style="width:931px" src="Untitled%2060.png"/></a></figure><ul id="e47c6abb-a20d-46e7-9e53-337cb673aa0b" class="bulleted-list"><li style="list-style-type:disc">a Bitmap (.bmp) is an <mark class="highlight-yellow">uncompressed image</mark>, its just arrays of numbers</li></ul><ul id="32202f1c-c8af-4cc4-9039-578d2b694ec4" class="bulleted-list"><li style="list-style-type:disc">a Portable Network Graphics (.png) uses <mark class="highlight-yellow">lossless compression </mark></li></ul><ul id="54d165f7-3b45-4815-882d-3b96275ae7f4" class="bulleted-list"><li style="list-style-type:disc">a Joint Photographic Experts Group (.jpg) uses <mark class="highlight-yellow">both lossless and lossy compression</mark></li></ul><ul id="2289978d-f542-4fdd-a822-55506bc665f1" class="toggle"><li><details><summary>example</summary><figure id="3432114e-f668-4ca1-8223-6660ae5e6415" class="image"><a href="Untitled%2061.png"><img style="width:915px" src="Untitled%2061.png"/></a></figure><blockquote id="4cfaa682-2569-4e00-a747-d797a5f03b9e" class="">even tho jpg should be smaller than png, because this example is a very simple color patch, then lossy takes more bits while specifying probability of likely bits comparied to lossless just stating all the pixels that are already there.</blockquote></details></li></ul><ul id="a1d8cac7-77b9-4af4-9383-256782adabc8" class="toggle"><li><details><summary>example 2</summary><figure id="87669adc-9720-47e1-b2d9-4c47dfb27cb3" class="image"><a href="Untitled%2062.png"><img style="width:915px" src="Untitled%2062.png"/></a></figure><ul id="8ce463b9-1f82-4c06-9342-1e36f3cfbbcb" class="bulleted-list"><li style="list-style-type:disc">uses rng to generate a color for each number</li></ul><p id="8e2f1065-db3e-4cc1-bc92-a80fd34303f3" class="">which will work well on this?</p><figure id="245e817b-5d72-49f9-b1cb-43026aa7941e" class="image"><a href="Untitled%2063.png"><img style="width:944px" src="Untitled%2063.png"/></a></figure></details></li></ul><ul id="8749bd86-bbad-46b7-9600-9f741c5c5b02" class="toggle"><li><details><summary>example 3</summary><figure id="2fc8be05-8936-46ed-b55a-fcc70dfdc319" class="image"><a href="Untitled%2064.png"><img style="width:945px" src="Untitled%2064.png"/></a></figure><figure id="efc0cfb3-4810-481d-94a9-f99a96f0032c" class="image"><a href="Untitled%2065.png"><img style="width:943px" src="Untitled%2065.png"/></a></figure></details></li></ul><ul id="e3112c7f-1b9d-405e-a2fe-ad5f8acadf3b" class="toggle"><li><details><summary>example 4</summary><figure id="b03db3e7-67d2-45c1-b1c8-d283929eb326" class="image"><a href="Untitled%2066.png"><img style="width:929px" src="Untitled%2066.png"/></a></figure></details></li></ul><p id="7cdc4940-b7e7-4c91-a96f-f08e5b1004d9" class="">
+</p></details></li></ul><p id="0998d67f-f051-4284-a8e8-2aa9aaa41b34" class="">
+</p></details></li></ul><ul id="67450ef5-1506-4041-94d3-0571a3e798f7" class="toggle"><li><details><summary>Movies</summary><figure id="1c6de9f3-4271-4d97-b8f5-7e667bae0016" class="image"><a href="Untitled%2067.png"><img style="width:938px" src="Untitled%2067.png"/></a></figure><ul id="5926bc20-8572-4e2e-844b-c4cf933fa1e0" class="bulleted-list"><li style="list-style-type:disc">huge amount of opportunities for compression. <ul id="e95cd5b2-97e3-42d3-b1e8-5f34004966d1" class="bulleted-list"><li style="list-style-type:circle">because we have a further layer of difference between frames that can be small</li></ul><ul id="2cb02e0b-49ba-4390-bf34-68444a2620d5" class="bulleted-list"><li style="list-style-type:circle">so you can compress each frame and then do compression in between them<ul id="37310805-9ade-49a9-bb23-f81fe5171b68" class="bulleted-list"><li style="list-style-type:square">file becomes much smaller than raw image calculations can predict </li></ul></li></ul></li></ul></details></li></ul></details></li></ul><ul id="56c4bd49-e8f3-43d5-b989-6a4e4b84344d" class="toggle"><li><details><summary>Project 2 introduction</summary><figure id="81525e6a-5fa6-452f-ba95-5d500edeb065"><a href="https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR101_2023T1/LectureSchedule/CompVision1.pdf" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR101_2023T1/LectureSchedule/CompVision1.pdf</div></div></a></figure><figure id="7d5fed2e-53ec-470a-aac8-4c5bc1df985a"><a href="https://ecs.wgtn.ac.nz/Courses/ENGR101_2023T1/RaspberryPI" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Raspberry PI - Courses/ENGR101_2023T1 | ECS | Victoria University of Wellington</div></div><div class="bookmark-href"><img src="https://ecs.wgtn.ac.nz/favicon.ico" class="icon bookmark-icon"/>https://ecs.wgtn.ac.nz/Courses/ENGR101_2023T1/RaspberryPI</div></div></a></figure><ul id="fd5a5170-698c-4043-b351-62ce5a6c4ae6" class="toggle"><li><details><summary>what is project 2 about?</summary><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="94784cdb-2af9-4d10-8f39-1b8a6d81c93d"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Project 2 will be using a camera connected to a Raspberry PI to detect the theft of a valuable red ruby called the red panther.</div></figure><ul id="b6560f1c-6710-4400-be53-bf45740a608f" class="bulleted-list"><li style="list-style-type:disc">when someone try to steal the ruby by removing it from the camera’s vison then the alarm should turn on</li></ul><ul id="a2b69b2f-049b-4f5e-8146-bd86afc67f9b" class="bulleted-list"><li style="list-style-type:disc">or if there is an umbrella to make it dark then steal the ruby </li></ul></details></li></ul><ul id="6f4dde25-1399-4800-a39f-3de86f76620e" class="toggle"><li><details><summary>what is a raspberry pi?</summary><ul id="864be1bf-6808-4c34-b20a-476d2afeb02b" class="bulleted-list"><li style="list-style-type:disc">a raspberry pi is a small computer <ul id="69064b79-5c9b-426b-92a8-39b54c2e2f9b" class="bulleted-list"><li style="list-style-type:circle">it cannot be done on a pc</li></ul><ul id="d741074f-9147-4898-a45d-14220fe86f17" class="bulleted-list"><li style="list-style-type:circle">quickly starts up</li></ul><ul id="cc4145cf-d9f6-4bc1-9024-95eeefe0ba27" class="bulleted-list"><li style="list-style-type:circle">OS and files are stored on SD card</li></ul><ul id="dcbe01ff-846a-4724-8c3a-e60fb3fc97ec" class="bulleted-list"><li style="list-style-type:circle">can connect to wifi</li></ul><ul id="706bf5e4-d793-46db-8633-a48c5471e860" class="bulleted-list"><li style="list-style-type:circle">Runs customized Linux</li></ul><ul id="8fb62bc4-d912-496a-9f6b-35d0ac08d27f" class="bulleted-list"><li style="list-style-type:circle">C++ compiler and Geany installed</li></ul><ul id="9beab0de-b538-45ed-814e-4d5b642c60e7" class="bulleted-list"><li style="list-style-type:circle">Custom library E101.h</li></ul></li></ul><figure id="bf06dfc0-30e4-437c-9f93-5d0ab6d356f7" class="image"><a href="Untitled%2068.png"><img style="width:460px" src="Untitled%2068.png"/></a></figure></details></li></ul><ul id="bed6dadb-1076-43ad-b9ca-4319f1ed026b" class="toggle"><li><details><summary>What are images in memory?</summary><p id="cb77059f-ecbd-4316-9db9-38a63b9a5d32" class="">we already know that images are made up of RBG arrays which are 1 byte (char) for each other</p><figure id="c6ad5389-fdd1-4d61-aeac-81bd57b01a7d" class="image"><a href="Untitled%2069.png"><img style="width:929px" src="Untitled%2069.png"/></a></figure></details></li></ul><ul id="fdd7e19f-f93e-4392-bfdb-483553e7c1bb" class="toggle"><li><details><summary>Raster vs vector</summary><p id="ad8d71f7-e68f-43d8-b0bd-0d69cd2a64de" class="">there are two types of images, Raster images and Vector images</p><ul id="9802ebd3-e245-41f6-8565-7c7ae4febb8c" class="bulleted-list"><li style="list-style-type:disc">Raster<ul id="b00dbb48-1b29-4ced-b241-77836fa79fe1" class="bulleted-list"><li style="list-style-type:circle">made up of alot of pixels</li></ul><ul id="05284f95-5125-45d6-9a37-08f45c9b2c87" class="bulleted-list"><li style="list-style-type:circle">320* 248*3 = 230400 bytes to store</li></ul></li></ul><ul id="934f0548-a346-44dd-b987-f56da986a417" class="bulleted-list"><li style="list-style-type:disc">Vector<ul id="b3b3f3fc-9e91-43d6-9738-c6beacd113a5" class="bulleted-list"><li style="list-style-type:circle">instead of storing pixels, it stores what is being drawn in the image</li></ul></li></ul><figure id="df620daa-a2d9-47bd-ba9e-a3590d601b7f" class="image"><a href="Untitled%2070.png"><img style="width:371px" src="Untitled%2070.png"/></a></figure><ul id="129a8b94-75a1-483b-94bd-81625af5e5dc" class="toggle"><li><details><summary>Converting images</summary><ul id="6dcef24e-2bba-4e2b-b77c-55dbd669338a" class="bulleted-list"><li style="list-style-type:disc">converting from vector to raster is easy</li></ul><ul id="39409b30-3411-4955-a494-0b5603986cf8" class="bulleted-list"><li style="list-style-type:disc">you can’t effectively convert from raster to vector </li></ul><figure id="af262eb1-6dec-4447-b936-792742e9c2ec" class="image"><a href="Untitled%2071.png"><img style="width:922px" src="Untitled%2071.png"/></a></figure></details></li></ul></details></li></ul><ul id="a884a620-115d-4ab3-bdf3-929d25e5dad9" class="toggle"><li><details><summary>Helper software</summary><p id="6c1a2f65-b628-4fc2-85f1-0b4e4ea7022f" class="">we’ll be using the E101.h libary on the raspberry pi and we can use these methods</p><ul id="930287f6-f810-437b-983b-de18b6de5ed1" class="bulleted-list"><li style="list-style-type:disc">unsigned char get pixel(int row,int col, int color)</li></ul><ul id="33817598-22ea-403f-ae0c-26fc7f02c11f" class="bulleted-list"><li style="list-style-type:disc">take picture()</li></ul><ul id="9b251085-aab2-442c-bc02-6a47984a9721" class="bulleted-list"><li style="list-style-type:disc">update screen()</li></ul><ul id="fe833477-25bb-4195-8f0f-f11d728e750e" class="bulleted-list"><li style="list-style-type:disc">int set pixel (int row, int col, char red, char green,char blue);</li></ul><figure id="46d7bdac-da32-43c8-ada6-749567779423" class="image"><a href="Untitled%2072.png"><img style="width:911px" src="Untitled%2072.png"/></a></figure></details></li></ul><ul id="79fecc67-5694-49ad-b898-f86487d9c030" class="toggle"><li><details><summary>starting code</summary><ul id="75849700-5af6-4d16-a467-c12c783e7bc9" class="bulleted-list"><li style="list-style-type:disc">the template we will be using when we start the project </li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="15ec8a8d-8ba0-4df7-b0b0-aecb0ea281e2" class="code"><code class="language-Java">int totRed = 0;
+int totInt = 0;
+double redness = 0.0;
+// for all pixels in latest image
+for ( int row = 0 ; row &lt; 240 ; row ++) {
+for ( int col = 0; col &lt; 320; col ++) {
+totRed = totRed + ( int ) get_pixel ( row , col , 0);
+totInt = totInt + ( int ) get_pixel ( row , col , 3);
+redness = ( double ) totRed /(3.0*( double ) totInt );
+}</code></pre><ul id="c6ebe3c5-0feb-4da0-9cc2-672601c49727" class="bulleted-list"><li style="list-style-type:disc">it calculates total red and total white of the image</li></ul><ul id="cf9e3475-c398-4312-92e9-e8a80d3374cc" class="bulleted-list"><li style="list-style-type:disc">it works really badly, you have to modify it </li></ul><p id="855b63ae-ab74-4c9e-8259-c14ed476e871" class="">
+</p></details></li></ul><ul id="47551d98-4e9e-4b54-bfe0-d6acda4c5a7c" class="toggle"><li><details><summary>Working with real images</summary><p id="5cdd53c8-35c4-45a0-9935-6a5dd008c45e" class="">images are not perfect </p><ul id="10b47f35-07eb-44e9-a96e-1c0598421864" class="bulleted-list"><li style="list-style-type:disc">255 to 0</li></ul><ul id="52f3b2a9-acbf-43c7-b93c-7b81f659fed0" class="bulleted-list"><li style="list-style-type:disc">shadows will change that </li></ul><p id="7e79f9c1-c3c2-48b1-aafa-cc5211986fb0" class="">working with a camera you’ll never have 255 and 0 because of lighting </p><ul id="348a9397-a2a0-4bda-801b-579c7e859fa8" class="bulleted-list"><li style="list-style-type:disc">this means that the program needs to be tolerant <figure id="0e778424-bf46-4c2c-86b2-1f787b1fe27c" class="image"><a href="Untitled%2073.png"><img style="width:315px" src="Untitled%2073.png"/></a></figure></li></ul><p id="a611868d-1a92-49f1-a699-ac1a8fd1ff42" class="">
+</p><figure id="4d98f638-b25e-4e4b-9af1-99879fcb2ebb" class="image"><a href="Untitled%2074.png"><img style="width:917px" src="Untitled%2074.png"/></a></figure><figure id="27678903-4df7-4999-914c-28bb0b374b2e" class="image"><a href="Untitled%2075.png"><img style="width:933px" src="Untitled%2075.png"/></a></figure><p id="f6ced26f-7146-4fee-9f3f-89c0f3e25e6a" class="">
+</p></details></li></ul><ul id="21b9acb5-0f5c-4874-982e-f26075c21920" class="toggle"><li><details><summary>Challenge part</summary><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="fa3f9f5d-e047-416b-9daf-f19d9f3ecb9c"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">the Challenge is that we will put a fake ruby in the camera, our job is to detect the real vs fake one</div></figure><figure id="6ad3018e-241b-4582-9bec-590020297b9c" class="image"><a href="Untitled%2076.png"><img style="width:922px" src="Untitled%2076.png"/></a></figure></details></li></ul><p id="99af6bce-8e0a-4e69-abe9-f356dd8903d4" class="">
+</p></details></li></ul><ul id="d47ef8ac-f687-4ad6-bd9b-248a3baa4416" class="toggle"><li><details><summary>Project 2 review</summary><figure id="18280156-72be-41fe-a53b-a24085f7acc6"><a href="https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR101_2023T1/LectureSchedule/Making_ICs_Summary_2023.pdf" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR101_2023T1/LectureSchedule/Making_ICs_Summary_2023.pdf</div></div></a></figure><p id="5d7de7fe-84b1-489b-bb45-1e1a16a1e5b8" class="">
+</p></details></li></ul></details></li></ul><ul id="27dce6bb-df97-4e10-939a-917bf091e5bb" class="toggle"><li><details><summary>Making Microchips</summary><figure id="519cce3d-4251-4e5c-a730-619906052f09"><a href="https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR101_2023T1/LectureSchedule/Making_ICs_Summary_2023.pdf" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR101_2023T1/LectureSchedule/Making_ICs_Summary_2023.pdf</div></div></a></figure><ul id="d270f9a7-638c-40b8-af3f-ec632d7245e8" class="bulleted-list"><li style="list-style-type:disc">the key ingredient in most electronics are transistors, microchips are just made up of a lot of small transistors</li></ul><ul id="4b14adb5-9baf-4116-9bfc-7d7c96bc7c5f" class="toggle"><li><details><summary>what&#x27;s behind all of this?</summary><ul id="46b2760b-bcc4-458a-992b-f76e203ec2fd" class="toggle"><li><details><summary>Vacuum Tubes (valves) </summary><ul id="805bd780-0678-449e-8ee4-dc79454f1c14" class="bulleted-list"><li style="list-style-type:disc">old vacuum tubes <figure id="69da4176-d245-4436-8409-71590f12d1b2" class="image"><a href="Untitled%2077.png"><img style="width:420px" src="Untitled%2077.png"/></a></figure></li></ul><ul id="8cd3aaa3-ac5f-4684-9156-960222ce1402" class="bulleted-list"><li style="list-style-type:disc"></li></ul></details></li></ul><ul id="5d8c98ec-7034-4587-a320-4e9a7ee76fef" class="toggle"><li><details><summary>Transistors</summary><ul id="6f3053d9-ec78-457f-8d1b-9f46c975a9b4" class="bulleted-list"><li style="list-style-type:disc">made in 1947 by Bardeen, Brattain and Shockley</li></ul></details></li></ul><ul id="e0bf59f5-c2e8-4105-aa3b-9e74df34f62c" class="toggle"><li><details><summary>Integrated Circuits (chips)</summary><ul id="a0dc8cc2-1562-46a2-9f5c-5972e7887ea9" class="bulleted-list"><li style="list-style-type:disc">microscopic circuit with a lot of transistors </li></ul></details></li></ul><p id="8c28d113-5d89-461c-b442-5a16e817f334" class="">
+</p></details></li></ul><ul id="7a734600-d790-4880-83d9-3cc3c6be2c2a" class="toggle"><li><details><summary>how small is a microchip?</summary><figure id="0e030642-d962-472e-b4cd-8fd13d459524" class="image"><a href="Untitled%2078.png"><img style="width:895px" src="Untitled%2078.png"/></a></figure><ul id="234c71e4-438d-4062-b0fd-00c697ff687c" class="bulleted-list"><li style="list-style-type:disc">Transistor with 50 nm structures.<ul id="93ec06e3-6ddf-42d7-a9a1-6ed6afa97670" class="bulleted-list"><li style="list-style-type:circle">a few hundred atoms across </li></ul></li></ul><figure id="f76f6227-59dc-4cde-8a7d-dac033c06c2f" class="image"><a href="Untitled%2079.png"><img style="width:920px" src="Untitled%2079.png"/></a></figure></details></li></ul><ul id="7e2f6639-79a9-4e30-b2a3-1c6fd9be1c35" class="toggle"><li><details><summary>Moore’s Law:</summary><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5b51b067-8bd1-4ed6-b56d-3983e209cdf5"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">number of transistors on a microchip doubles every 2 years</div></figure><figure id="5e875360-b136-4230-93ef-42060115b7a0" class="image"><a href="Untitled%2080.png"><img style="width:901px" src="Untitled%2080.png"/></a></figure><ul id="d81bdd3f-9014-4246-8d91-5c1f5bebd754" class="bulleted-list"><li style="list-style-type:disc">the law is slowing a bit but its still valid to say it doubles every 2 years</li></ul><p id="1c09d9ae-3225-4208-a11a-79eb850f029a" class="">
+</p></details></li></ul><ul id="661e5e67-d122-4d91-bcf2-d32f846b492e" class="toggle"><li><details><summary>hardware</summary><ul id="88b686b3-cba0-4242-8c71-64ccf3d4844d" class="toggle"><li><details><summary>circuit </summary><figure id="adfd3e92-fc6c-48ed-89d2-9455b0c20839" class="image"><a href="Untitled%2081.png"><img style="width:1089px" src="Untitled%2081.png"/></a></figure></details></li></ul><ul id="737ef04a-7433-4396-92dd-6f0ca76d2839" class="toggle"><li><details><summary>simplified transistor </summary><ul id="7fe38582-2b7f-46d1-a451-06217fe94fb4" class="bulleted-list"><li style="list-style-type:disc">not actually a real transistor but explains the concept of one. its called a stylized transistor</li></ul><figure id="46ba5226-63dc-42f3-8cda-57c227881aaa" class="image"><a href="Untitled%2082.png"><img style="width:1164px" src="Untitled%2082.png"/></a></figure><ul id="13ed368e-d062-4f02-9bed-566583ec46a8" class="bulleted-list"><li style="list-style-type:disc">if the input is on, output is off</li></ul><ul id="32611414-bc5d-47e8-a5f8-96c00858a3df" class="bulleted-list"><li style="list-style-type:disc">if the input is off, output is on</li></ul><ul id="105d91ab-35e5-4d83-ba71-51b0cf14915d" class="bulleted-list"><li style="list-style-type:disc">this is the essence of a computer </li></ul></details></li></ul><ul id="fc46bfd6-ce7a-4e38-89ac-2acd85afc6d1" class="toggle"><li><details><summary>logic gate</summary><figure id="b932e10f-4112-4808-8ddf-7cfee1ea3567" class="image"><a href="Untitled%2083.png"><img style="width:1275px" src="Untitled%2083.png"/></a></figure><ul id="9e449e99-e2d9-488b-8a41-66e83f27e60f" class="bulleted-list"><li style="list-style-type:disc">you make any computer logic if you have enough nor and nand gates </li></ul></details></li></ul><ul id="b7d61286-09d9-4bc1-9e2e-4099a06c81df" class="toggle"><li><details><summary>simplified logic gate circuit</summary><figure id="4daae741-3438-47b1-a40a-42a01a158fdc" class="image"><a href="Untitled%2084.png"><img style="width:1231px" src="Untitled%2084.png"/></a></figure><ul id="622450ea-cd88-49b8-9764-371c76450bca" class="bulleted-list"><li style="list-style-type:disc">this is a nand gate<ul id="2505cdd7-4611-4f15-ab65-06a04e71d3d7" class="bulleted-list"><li style="list-style-type:circle">if you put the switches in parallel then you can make a nor gate </li></ul></li></ul></details></li></ul><ul id="9812ef41-36d3-420a-8eca-cb7af3cc56fa" class="toggle"><li><details><summary>how to make a microchip </summary><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="059814eb-34c1-4407-91d5-090b823f5c2e"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">transistors are made using photo lithography</div></figure><ul id="e9b67f2f-87a1-418f-a196-16f7d4dfb370" class="toggle"><li><details><summary>what is photo lithography</summary><h3 id="54b85db4-714a-442f-9574-0c5f247b51f9" class="">what is photo lithography</h3><ul id="c60c22c0-0a29-4d62-8e42-da8287d35169" class="bulleted-list"><li style="list-style-type:disc">its a group of different techniques, not just one</li></ul><figure id="0b5b6029-2ce4-4e39-9424-c6c0c240bae3" class="image"><a href="Untitled%2085.png"><img style="width:918px" src="Untitled%2085.png"/></a></figure><ul id="dc05e7ae-1fff-4362-aa25-48c0b6f20127" class="bulleted-list"><li style="list-style-type:disc">photoresist is a material that burns away when you expose it to light and chemicals </li></ul><ul id="6fdb54e4-c414-4013-85aa-bf74ac1ef4ae" class="bulleted-list"><li style="list-style-type:disc">you start with a silicon slab which is called a die </li></ul></details></li></ul><ul id="a5d9c8e7-13a6-41b0-835c-d48eb24e050a" class="toggle"><li><details><summary>Step by Step example: how to spell hello on a microchip</summary><h3 id="6e933eaa-128d-47ad-ae8e-59e2b36d45c2" class="">example: how to spell hello on a microchip</h3><figure id="152fef9b-e259-4449-91a4-12a8b9dd6187" class="image"><a href="Untitled%2086.png"><img style="width:947px" src="Untitled%2086.png"/></a></figure><ul id="4dcc773c-d7cb-480b-8e7f-3222bb597ed9" class="bulleted-list"><li style="list-style-type:disc">step 1: you take a mask with letters cut out of the marital </li></ul><ul id="bb81f9c1-dc71-44ae-a892-327a899df83b" class="bulleted-list"><li style="list-style-type:disc">step 2: you put a lens under the mask that minifies (zoom out) instead of magnifies (zoom in) </li></ul><ul id="61e01d4b-2140-4f69-8df3-aecdda04b1b1" class="bulleted-list"><li style="list-style-type:disc">step 3: turn on a light bulb above the mask which burns through the photoresist </li></ul><figure id="175b7719-49e2-4a88-a012-6b914266432b" class="image"><a href="Untitled%2087.png"><img style="width:942px" src="Untitled%2087.png"/></a></figure><ul id="f5512902-6d1d-4635-b6af-479e00ed87c2" class="bulleted-list"><li style="list-style-type:disc">step 4: put the photoresist into a chamber which outs metal all over the place</li></ul><figure id="100748c9-c07b-49e6-b076-5e3ad184d9a3" class="image"><a href="Untitled%2088.png"><img style="width:850px" src="Untitled%2088.png"/></a></figure><ul id="f1756183-3c33-437d-9c89-76c7ab07b7a2" class="bulleted-list"><li style="list-style-type:disc">step 5: burn away the rest of the photo resist and metal using chemicals or plasma EXECPT where you put holes in the photoresist and the metal stuck to the die</li></ul><p id="c1cfeaf7-ea35-4b0e-9002-1cae1f80abfe" class=""> </p></details></li></ul><ul id="f77ef744-5061-4688-bd91-a74b612076c2" class="toggle"><li><details><summary>Circuit diagram of a simple microchip </summary><figure id="446ffe98-d7cc-41fb-abc2-c468756c9f80" class="image"><a href="Untitled%2089.png"><img style="width:898px" src="Untitled%2089.png"/></a></figure><ul id="eb8f4045-83d6-4fca-a125-5fcfe30f9b6e" class="bulleted-list"><li style="list-style-type:disc">made using masks</li></ul><figure id="3312fa3e-e040-41d5-bf2f-4b6318389e7d" class="image"><a href="Untitled%2090.png"><img style="width:784px" src="Untitled%2090.png"/></a></figure></details></li></ul><ul id="d2e21610-7031-4f39-b3ab-e93f98efba58" class="toggle"><li><details><summary>how to make a transistor on a microchip </summary><ul id="d80801ed-706e-47b3-98bb-1ea031ad413e" class="bulleted-list"><li style="list-style-type:disc">a transistor is a chunk of silicon with 3 different regions  </li></ul><figure id="691e287b-fd05-4845-9921-d8c43fbe8fdb" class="image"><a href="Untitled%2091.png"><img style="width:662px" src="Untitled%2091.png"/></a></figure><ul id="5e771d1a-7b81-4643-9a56-18a0cdcee319" class="bulleted-list"><li style="list-style-type:disc">we put a chemical which adds electrons to each side</li></ul><figure id="1c8c3c29-4e38-45f0-bca2-f478ac8db855" class="image"><a href="Untitled%2092.png"><img style="width:624px" src="Untitled%2092.png"/></a></figure><ul id="545c99e1-fc63-4b5d-ada9-c436ca2ee3af" class="bulleted-list"><li style="list-style-type:disc">this means that the silicon marital has electrons removed </li></ul><figure id="80c1afb8-bfee-48cb-8a9b-770a27c34270" class="image"><a href="Untitled%2093.png"><img style="width:840px" src="Untitled%2093.png"/></a></figure><ul id="efc00faa-2229-4699-ac81-1a7c03957a44" class="bulleted-list"><li style="list-style-type:disc">then we can put glass and metal on the 3 regions of silicon </li></ul><ul id="977cfaa2-ed11-4eab-bc65-1cc4c67ba9eb" class="bulleted-list"><li style="list-style-type:disc">when we put a voltage on the metal we can pull electrons up to then make a continuous path for the electrons to flow <ul id="22571bb9-7ec9-47a0-8aca-34bba910599a" class="bulleted-list"><li style="list-style-type:circle">turning off and on the voltage in the plates will act like a switch <figure id="c1ba6446-d043-4726-860b-a57801b2be84" class="image"><a href="Untitled%2094.png"><img style="width:474px" src="Untitled%2094.png"/></a></figure><ul id="0c25face-1ecd-40fe-82d8-a854c6e0f98f" class="bulleted-list"><li style="list-style-type:square">this is so that when the switch is closed and the electrons are pulled up, the silicon can act like a wire and conduct electricity</li></ul></li></ul></li></ul><ul id="b07520a4-2790-405e-98bb-0d1bbe64164d" class="bulleted-list"><li style="list-style-type:disc">we can take this knowledge of how to make a transistor and make it very small in a microchip using the method before but instead of the mask being a hello it is in the shape of a transistor <figure id="33dc7720-21b4-48ae-837a-be3c37672073" class="image"><a href="Untitled%2095.png"><img style="width:479px" src="Untitled%2095.png"/></a></figure><figure id="6e8c3951-475a-4721-83af-73976d07c14e" class="image"><a href="Untitled%2096.png"><img style="width:898px" src="Untitled%2096.png"/></a></figure></li></ul><ul id="1a423b1d-6092-4208-b50d-14ddb21b0bd3" class="bulleted-list"><li style="list-style-type:disc">after this all we have left to do is make the wires <p id="da310718-9ead-4449-9768-f696c1427cc8" class="">
+</p><p id="0f8c830a-7b1e-4a39-93be-3d9a4ffb9354" class="">
+</p><p id="ecc63ce1-cab3-4608-b01f-c5ee2d662228" class="">
+</p><p id="f108c4f6-b16e-43cd-b4e9-73c60e431f81" class="">
+</p></li></ul></details></li></ul><ul id="f77636a0-c0ad-4baf-bd84-981f83ed7110" class="toggle"><li><details><summary>Can Moore’s Law Continue?</summary><figure id="0f8620bc-7305-4726-8ee0-7881094662ae" class="image"><a href="Untitled%2097.png"><img style="width:871px" src="Untitled%2097.png"/></a></figure><ul id="3750bd4e-1c15-4b6c-856b-68ecdbfa8253" class="bulleted-list"><li style="list-style-type:disc">there are fundamental limits such as chips can’t be smaller than atoms</li></ul><figure id="cb5f8ac1-847e-4467-ba3a-9014d9a7636c" class="image"><a href="Untitled%2098.png"><img style="width:848px" src="Untitled%2098.png"/></a></figure><ul id="9b6bc12a-7d31-4eae-9081-89c129987d5c" class="bulleted-list"><li style="list-style-type:disc">there are practical limits such as the transistors not working as they are supposed to </li></ul><figure id="f3a1cb63-9594-4a37-af05-b7ff62cc3aa7" class="image"><a href="Untitled%2099.png"><img style="width:946px" src="Untitled%2099.png"/></a></figure><ul id="81aaf79d-ef9b-49b8-898c-0bf3737ebf5f" class="bulleted-list"><li style="list-style-type:disc">alot of people say that we might be getting to its limit</li></ul><figure id="40d394f1-d7c4-4f98-a841-367b9d587343" class="image"><a href="Untitled%20100.png"><img style="width:935px" src="Untitled%20100.png"/></a></figure><ul id="2a5a7944-1aee-4694-867d-14458c36a362" class="bulleted-list"><li style="list-style-type:disc">too many transistors that small can get too hot to work</li></ul><p id="b8d7345e-73c2-4dab-b630-1371065dbcdd" class="">
+</p><figure id="73dd5507-2e0b-4d18-b7a5-660ec442a9ef" class="image"><a href="Untitled%20101.png"><img style="width:940px" src="Untitled%20101.png"/></a></figure><ul id="9c0f2d91-6f89-429a-8594-62da25fa0baf" class="bulleted-list"><li style="list-style-type:disc">New Technologies are coming out that may help solve more’s law to continue </li></ul><ul id="059f50a3-d66d-45ce-bd3e-8b9df9f966f9" class="bulleted-list"><li style="list-style-type:disc">Summary</li></ul><figure id="b60ea870-59b4-4b64-8bcd-47aeda6cdc2a" class="image"><a href="Untitled%20102.png"><img style="width:943px" src="Untitled%20102.png"/></a></figure></details></li></ul></details></li></ul></details></li></ul></details></li></ul><p id="d4bd05a1-8015-452d-8cf1-2a257f37c1c1" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
