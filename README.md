@@ -1,1 +1,1 @@
-notion archieve for class notes on software engineering/computer science cources
+notion class note achieve for SW/CS courses 
